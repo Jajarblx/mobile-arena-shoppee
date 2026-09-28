@@ -49,6 +49,8 @@ Use PHP 8.2+ with the common Laravel extensions enabled, especially **mbstring**
 
 The project includes a pre-seeded SQLite demo database and prebuilt public CSS/JS, so Node is **not required just to preview it**.
 
+First copy `.env.example` to a private `.env` and apply the local overrides in [DEPLOYMENT.md](DEPLOYMENT.md#local-development). The example file now has production-safe defaults and cannot be used unchanged for local SQLite development. The same guide documents production deployment and every required environment group.
+
 ```bash
 composer install
 php artisan key:generate
