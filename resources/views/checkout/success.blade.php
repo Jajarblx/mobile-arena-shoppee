@@ -1,0 +1,5 @@
+@extends('layouts.app')
+@section('title','Order received')
+@section('content')
+<section class="success-wrap shell"><div class="success-card clay-panel"><div class="success-icon">✓</div><span class="eyebrow">Order request received</span><h1>Reference {{ $order->reference }}</h1><p>Thanks, {{ $order->customer_name }}. Your prototype order has been saved. In production, Mobile Arena staff would verify the exact unit, condition, stock and pickup/delivery details before confirming.</p><div class="success-meta"><div><span>Status</span><strong>{{ ucfirst($order->status) }}</strong></div><div><span>Subtotal</span><strong>₱{{ number_format((float)$order->subtotal,0) }}</strong></div><div><span>Fulfillment</span><strong>{{ $order->fulfillment === 'pickup' ? 'Store pickup' : 'Delivery request' }}</strong></div></div><div class="hero-actions"><a class="btn btn-primary" href="{{ route('products.index') }}">Keep shopping</a><a class="btn btn-secondary" href="{{ route('repair.create') }}">Need a repair?</a></div></div></section>
+@endsection

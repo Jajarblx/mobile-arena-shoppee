@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7f8da8"/><stop offset="1" stop-color="#2d3758"/></linearGradient><filter id="s"><feDropShadow dx="18" dy="24" stdDeviation="22" flood-color="#394261" flood-opacity=".22"/></filter></defs>
+<rect width="800" height="800" rx="120" fill="#eef3ff"/>
+<circle cx="180" cy="180" r="115" fill="#7f8da8" opacity=".18"/><circle cx="655" cy="640" r="145" fill="#2d3758" opacity=".18"/>
+<g filter="url(#s)" transform="rotate(8 400 400)"><rect x="245" y="85" width="310" height="630" rx="58" fill="#1d2746"/><rect x="263" y="111" width="274" height="580" rx="42" fill="url(#g)"/><rect x="352" y="121" width="96" height="23" rx="12" fill="#1d2746"/><circle cx="490" cy="180" r="28" fill="#202a49" opacity=".88"/><circle cx="490" cy="180" r="12" fill="#7f8bb4"/></g>
+<text x="400" y="758" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="28" fill="#697493">Mobile Arena · Demo Visual</text>
+</svg>

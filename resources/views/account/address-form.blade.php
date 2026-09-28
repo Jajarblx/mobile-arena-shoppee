@@ -1,0 +1,6 @@
+@extends('layouts.app')
+@section('title', $address ? 'Edit address' : 'Add address')
+@section('content')
+<section class="page-hero compact"><div class="shell"><span class="eyebrow">My account / Addresses</span><h1>{{ $address ? 'Edit address' : 'Add an address' }}</h1><p>Use Philippine address details so delivery requests are clear.</p></div></section>
+<div class="shell account-layout">@include('account.partials.nav')<div class="account-content"><form class="clay-card account-form address-form" method="POST" action="{{ $address ? route('account.addresses.update', $address) : route('account.addresses.store') }}" data-submit-once>@csrf @if($address) @method('PATCH') @endif<h2>Delivery details</h2>@include('account.partials.address-fields', ['prefix' => '', 'address' => $address])<label class="check-label"><input type="checkbox" name="is_default" value="1" @checked(old('is_default', $address?->is_default))><span>Use as my default address</span></label><div class="form-submit"><a class="btn btn-secondary" href="{{ route('account.addresses') }}">Cancel</a><button class="btn btn-primary" type="submit" data-busy-label="Saving address…">Save address</button></div></form></div></div>
+@endsection
